@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Brand design tokens — become classes like bg-saffron, text-ink */
+@theme {
+  --color-ink: #1b2a41;
+  --color-saffron: #f4a300;
+  --color-terracotta: #d9653b;
+  --color-teal: #2e7d73;
+  --color-cream: #faf6ef;
+  --color-stone: #6b7280;
+
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
