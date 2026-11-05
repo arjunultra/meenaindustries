@@ -2,14 +2,114 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>meenaindustries</title>
+
+    <!-- Primary SEO -->
+    <title>
+      Meena Industries | Cement Paints, Distempers, Emulsions & Primers
+    </title>
+    <meta
+      name="description"
+      content="Meena Industries manufactures quality decorative paints — Suncem cement paint, Suncoat distempers, acrylic emulsions, primers and Sudarshan wall putty."
+    />
+    <link rel="canonical" href="https://www.meenaindustries.com/" />
+    <meta name="theme-color" content="#1B2A41" />
+
+    <!-- Open Graph (how links look when shared on WhatsApp, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Meena Industries — Decorative Paints & Primers"
+    />
+    <meta
+      property="og:description"
+      content="Cement paints, distempers, emulsions, primers and wall putty, manufactured for lasting finishes."
+    />
+    <meta property="og:url" content="https://www.meenaindustries.com/" />
+    <meta
+      property="og:image"
+      content="https://www.meenaindustries.com/og-image.jpg"
+    />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data: helps Google show your business details -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Meena Industries",
+        "description": "Manufacturer of decorative paints, primers and wall putty.",
+        "url": "https://www.meenaindustries.com/",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Your street address",
+          "addressLocality": "Your city",
+          "addressRegion": "Your state",
+          "postalCode": "XXXXXX",
+          "addressCountry": "IN"
+        }
+      }
+    </script>
   </head>
-  <body class="bg-cream font-body">
-    <h1 class="text-4xl font-bold text-ink p-8">
-      Meena <span class="text-saffron">Industries</span>
-    </h1>
+  <body class="bg-cream text-ink font-body">
+    <!-- Lets keyboard users jump past the nav -->
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
+
+    <header class="sticky top-0 z-50 bg-ink/95 backdrop-blur shadow-md">
+      <nav
+        aria-label="Main navigation"
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4"
+      >
+        <a href="#home" class="font-display text-xl font-bold text-cream">
+          Meena <span class="text-saffron">Industries</span>
+        </a>
+
+        <ul class="hidden gap-8 md:flex">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#paintculator" class="nav-link">Paintculator</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="home" aria-labelledby="home-title">
+        <h1 id="home-title">Colours that last, from Meena Industries</h1>
+      </section>
+
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About Us</h2>
+      </section>
+
+      <section id="products" aria-labelledby="products-title">
+        <h2 id="products-title">Our Products</h2>
+      </section>
+
+      <section id="paintculator" aria-labelledby="calc-title">
+        <h2 id="calc-title">Paintculator</h2>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Us</h2>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Meena Industries. All rights reserved.</p>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
