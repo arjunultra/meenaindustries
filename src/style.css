@@ -1,16 +1,48 @@
 @import "tailwindcss";
 
-/* Brand design tokens — become classes like bg-saffron, text-ink */
+/* Enables the dark: variant, driven by a .dark class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+  /* Brand colours: same in both themes */
   --color-ink: #1b2a41;
   --color-saffron: #f4a300;
   --color-terracotta: #d9653b;
   --color-teal: #2e7d73;
   --color-cream: #faf6ef;
-  --color-stone: #6b7280;
+
+  /* Theme colours: light values (dark values below) */
+  --color-page: #faf6ef;
+  --color-surface: #ffffff;
+  --color-card: #faf6ef;
+  --color-heading: #1b2a41;
+  --color-body: #5a6170;
+  --color-accent: #b34a24;
+  --color-accent-2: #24685f;
+  --color-line: rgb(27 42 65 / 0.12);
 
   --font-display: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
+}
+
+/* Dark theme: only the theme colours change */
+.dark {
+  --color-page: #0f1828;
+  --color-surface: #162238;
+  --color-card: #1f2d47;
+  --color-heading: #f3eee4;
+  --color-body: #b3bcc9;
+  --color-accent: #f2895c;
+  --color-accent-2: #4fb3a5;
+  --color-line: rgb(255 255 255 / 0.12);
+}
+
+/* Native scrollbars and form controls follow the theme */
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
 }
 /* custom css */
 section {
