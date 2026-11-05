@@ -81,7 +81,52 @@
           <li><a href="#paintculator" class="nav-link">Paintculator</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="md:hidden rounded p-2 text-cream hover:text-saffron focus-visible:outline-2 focus-visible:outline-saffron"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <!-- Hamburger icon -->
+          <svg
+            data-icon="open"
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close (X) icon -->
+          <svg
+            data-icon="close"
+            class="hidden h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
       </nav>
+      <ul
+        id="mobile-menu"
+        class="hidden flex-col gap-1 border-t border-cream/10 px-4 pb-4 md:hidden"
+      >
+        <li><a href="#home" class="nav-link block py-2">Home</a></li>
+        <li><a href="#about" class="nav-link block py-2">About</a></li>
+        <li><a href="#products" class="nav-link block py-2">Products</a></li>
+        <li>
+          <a href="#paintculator" class="nav-link block py-2">Paintculator</a>
+        </li>
+        <li><a href="#contact" class="nav-link block py-2">Contact</a></li>
+      </ul>
     </header>
 
     <main id="main">

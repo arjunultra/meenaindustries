@@ -22,6 +22,9 @@ section {
     @apply text-cream/80 font-medium transition-colors hover:text-saffron
            focus-visible:outline-2 focus-visible:outline-saffron rounded;
   }
+  .nav-link[aria-current="true"] {
+    @apply text-saffron;
+  }
 }
 /* custom css ends */
 
