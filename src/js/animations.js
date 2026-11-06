@@ -8,6 +8,8 @@ export function initAnimations() {
   mm.add("(prefers-reduced-motion: no-preference)", () => {
     aboutAnimations();
     productsAnimations();
+    paintculatorAnimations();
+    contactAnimations();
   });
 }
 
@@ -101,5 +103,29 @@ function productsAnimations() {
     ease: "power3.out",
     stagger: 0.08,
     scrollTrigger: { trigger: "#product-grid", start: "top 80%", once: true },
+  });
+}
+// paintculator
+function paintculatorAnimations() {
+  gsap.utils.toArray("#paintculator .calc-reveal").forEach((el) => {
+    gsap.from(el, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 85%", once: true },
+    });
+  });
+}
+// contact animations
+function contactAnimations() {
+  gsap.utils.toArray("#contact .contact-reveal").forEach((el) => {
+    gsap.from(el, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 85%", once: true },
+    });
   });
 }

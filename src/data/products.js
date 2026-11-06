@@ -1,4 +1,7 @@
-// Each product: id, brand, category (for filtering), name, blurb, packs (display only, no prices)
+// Each product: id, brand, category (for filtering), name, blurb, packs (display, no prices),
+// coverage: approximate sq ft covered per unit, PER COAT — used by the Paintculator.
+// ⚠️ These coverage figures are industry-standard estimates, not Meena Industries' tested figures.
+// Replace with real numbers from your technical data sheets when available.
 export const CATEGORIES = [
   { id: "all", label: "All Products" },
   { id: "cement-paint", label: "Cement Paint" },
@@ -17,6 +20,7 @@ export const PRODUCTS = [
     blurb:
       "Our original 1977 launch — a tough, waterproof cement-based paint for exteriors, in standard and special shades (Sun Green, Yellow Green, Brick Red).",
     packs: ["1 kg", "5 kg", "20 kg"],
+    coverage: { rate: 70, unit: "kg" },
   },
   {
     id: "suncoat-distemper",
@@ -26,6 +30,7 @@ export const PRODUCTS = [
     blurb:
       "An economical, smooth-finish distemper for interior walls, available in regular, dark and special colour ranges.",
     packs: ["1 kg", "2 kg", "5 kg", "10 kg", "20 kg"],
+    coverage: { rate: 120, unit: "kg" },
   },
   {
     id: "suncoat-matt",
@@ -35,6 +40,7 @@ export const PRODUCTS = [
     blurb:
       "A smooth matt-finish interior emulsion in light and dark shades — offwhite, ivory, wedgewood, marble grey, bone white, peach and light biscuit.",
     packs: ["1 kg", "4 kg", "10 kg", "20 kg"],
+    coverage: { rate: 100, unit: "kg" },
   },
   {
     id: "suncoat-exterior-emulsion",
@@ -44,6 +50,7 @@ export const PRODUCTS = [
     blurb:
       "Weather-resistant exterior emulsion in Renaissance, Revel, Mehendi, Terracotta and other popular shades.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 110, unit: "L" },
   },
   {
     id: "suncoat-gold-series",
@@ -53,6 +60,7 @@ export const PRODUCTS = [
     blurb:
       "Our premium exterior emulsion range with vivid shades — Sunrise, Mohul Green, Jolly Holly, Phantom, Sapphire Blue and more.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 120, unit: "L" },
   },
   {
     id: "suncoat-flora",
@@ -62,6 +70,7 @@ export const PRODUCTS = [
     blurb:
       "A rich base-white exterior emulsion built for long-lasting exterior colour and finish.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 110, unit: "L" },
   },
   {
     id: "suncoat-wall-primer",
@@ -71,6 +80,7 @@ export const PRODUCTS = [
     blurb:
       "A water-base primer that preps exterior walls for even topcoat coverage.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 140, unit: "L" },
   },
   {
     id: "suncoat-cement-primer",
@@ -80,6 +90,7 @@ export const PRODUCTS = [
     blurb:
       "A water-base cement primer for interior walls, sealing surfaces before painting.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 140, unit: "L" },
   },
   {
     id: "suncoat-oil-primers",
@@ -89,6 +100,7 @@ export const PRODUCTS = [
     blurb:
       "Red Oxide (I.Q.), Zinc Phosphate Yellow Chrome, Primer Grey, C.P.O.B., S.K.P.S. Grey & White, and Wood Primer in White and Pink.",
     packs: ["1 kg", "2 kg", "4 kg", "20 kg"],
+    coverage: { rate: 90, unit: "kg" },
   },
   {
     id: "sudarshan-putty-powder",
@@ -98,6 +110,7 @@ export const PRODUCTS = [
     blurb:
       "A cement-based putty powder that gives walls a smooth, crack-resistant finish before painting.",
     packs: ["1 kg", "5 kg", "40 kg"],
+    coverage: { rate: 18, unit: "kg" },
   },
   {
     id: "sudarshan-acrylic-putty",
@@ -107,6 +120,7 @@ export const PRODUCTS = [
     blurb:
       "A ready-to-use acrylic paste putty for fine wall finishing, indoors and out.",
     packs: ["1 kg", "5 kg", "10 kg", "20 kg"],
+    coverage: { rate: 12, unit: "kg" },
   },
   {
     id: "sudarshan-universal-primer",
@@ -116,6 +130,7 @@ export const PRODUCTS = [
     blurb:
       "A water-base primer for both interior and exterior use — one primer, every wall.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 140, unit: "L" },
   },
   {
     id: "sudarshan-exterior-primer",
@@ -125,6 +140,7 @@ export const PRODUCTS = [
     blurb:
       "A dedicated exterior-grade primer for lasting adhesion under harsh weather.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 140, unit: "L" },
   },
   {
     id: "sudarshan-ae3",
@@ -134,6 +150,7 @@ export const PRODUCTS = [
     blurb:
       "A premium acrylic emulsion in base white, built for durability and colour retention.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 110, unit: "L" },
   },
   {
     id: "sudarshan-sc1",
@@ -143,6 +160,7 @@ export const PRODUCTS = [
     blurb:
       "A reliable base-white exterior emulsion for everyday exterior painting needs.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 110, unit: "L" },
   },
   {
     id: "sudarshan-flora",
@@ -152,6 +170,7 @@ export const PRODUCTS = [
     blurb:
       "Our Flora exterior range (FE-10, FE-13, FE-17, FE-20, SFE-2) for rich, weather-ready exterior colour.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 110, unit: "L" },
   },
   {
     id: "sudarshan-exterior-paint",
@@ -161,6 +180,7 @@ export const PRODUCTS = [
     blurb:
       "Available in Renaissance, Revel, Mehendi, Terracotta, Special Signal Red and other shades.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 110, unit: "L" },
   },
   {
     id: "sudarshan-gold-series",
@@ -170,6 +190,7 @@ export const PRODUCTS = [
     blurb:
       "Our premium exterior emulsion range under the Sudarshan name — same vivid Gold Series shades.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 120, unit: "L" },
   },
   {
     id: "sudarshan-surprise",
@@ -179,6 +200,7 @@ export const PRODUCTS = [
     blurb:
       "A smooth, vibrant interior emulsion in base white SB-2, for interior walls that need to stand out.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 120, unit: "L" },
   },
   {
     id: "fivestar-exterior-primer",
@@ -188,6 +210,7 @@ export const PRODUCTS = [
     blurb:
       "A dependable exterior wall primer for dealers who trust the Fivestar name.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 140, unit: "L" },
   },
   {
     id: "bluehill-universal-primer",
@@ -197,10 +220,10 @@ export const PRODUCTS = [
     blurb:
       "A universal primer for interior and exterior use under the Bluehill brand.",
     packs: ["1 L", "4 L", "10 L", "20 L"],
+    coverage: { rate: 140, unit: "L" },
   },
 ];
 
-// Brand accent used for the card's top border and tag
 export const BRAND_COLOUR = {
   Suncem: "terracotta",
   Suncoat: "saffron",
