@@ -82,6 +82,20 @@ section {
   .swatch[aria-pressed="true"] {
     @apply ring-4 ring-ink ring-offset-2 ring-offset-cream;
   }
+  .filter-pill {
+    @apply rounded-full border-2 border-line px-5 py-2 text-sm font-semibold text-body
+           transition-colors hover:border-saffron hover:text-heading
+           focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-heading;
+  }
+  .filter-pill[aria-pressed="true"] {
+    @apply border-saffron bg-saffron text-ink;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal px-5 py-2.5
+           text-sm font-semibold text-white transition-colors hover:bg-accent-2
+           focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-heading;
+  }
 }
 /* custom css ends */
 

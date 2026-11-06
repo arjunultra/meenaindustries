@@ -650,9 +650,69 @@
           </p>
         </div>
       </section>
+      <section
+        id="products"
+        aria-labelledby="products-title"
+        class="bg-surface">
+        <div class="mx-auto max-w-7xl px-4 py-20 md:py-28">
+          <p
+            class="products-reveal mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
+            Our Range
+          </p>
+          <h2
+            id="products-title"
+            class="products-reveal font-display text-3xl font-bold leading-tight text-heading sm:text-4xl lg:text-5xl">
+            Products built for every wall
+          </h2>
+          <p class="products-reveal mt-4 max-w-2xl text-lg text-body">
+            Cement paints, distempers, emulsions, primers and wall putty —
+            across Suncem, Suncoat, Sudarshan, Fivestar and Bluehill.
+          </p>
 
-      <section id="products" aria-labelledby="products-title">
-        <h2 id="products-title">Our Products</h2>
+          <!-- Filters -->
+          <div
+            id="product-filters"
+            role="group"
+            aria-label="Filter products by category"
+            class="products-reveal mt-10 flex flex-wrap gap-3"></div>
+
+          <!-- Cards -->
+          <div
+            id="product-grid"
+            class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Cards are rendered here by src/js/products.js -->
+          </div>
+          <div
+            class="products-reveal mt-16 flex flex-col items-start gap-6 rounded-3xl bg-teal p-8 text-white sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-widest text-white/80">
+                Our Own Brand
+              </p>
+              <h3 class="mt-1 font-display text-2xl font-bold">
+                Sudarshan — Wall Putty &amp; Universal Primer
+              </h3>
+              <p class="mt-2 max-w-xl text-white/90">
+                One primer for indoor and outdoor walls, paired with our acrylic
+                and powder wall putties — built as a complete finishing system.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/919843052486?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Sudarshan%20range."
+              target="_blank"
+              rel="noopener"
+              class="inline-flex shrink-0 items-center rounded-full bg-white px-6 py-3 font-semibold text-teal transition-colors hover:bg-cream">
+              Ask About Sudarshan
+            </a>
+          </div>
+
+          <p
+            id="product-empty"
+            class="mt-10 hidden text-center text-body"
+            role="status">
+            No products found in this category.
+          </p>
+        </div>
       </section>
 
       <section id="paintculator" aria-labelledby="calc-title">

@@ -5,9 +5,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function initAnimations() {
   const mm = gsap.matchMedia();
-
   mm.add("(prefers-reduced-motion: no-preference)", () => {
     aboutAnimations();
+    productsAnimations();
   });
 }
 
@@ -81,5 +81,25 @@ function aboutAnimations() {
       ease: "power2.out",
       scrollTrigger: { trigger: item, start: "top 75%", once: true },
     });
+  });
+}
+function productsAnimations() {
+  gsap.utils.toArray("#products .products-reveal").forEach((el) => {
+    gsap.from(el, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 85%", once: true },
+    });
+  });
+
+  gsap.from(".product-card", {
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.out",
+    stagger: 0.08,
+    scrollTrigger: { trigger: "#product-grid", start: "top 80%", once: true },
   });
 }
